@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "642271775142",
+    "firebase_url": "https://hubbler-7b88f.firebaseio.com",
+    "project_id": "hubbler-7b88f",
+    "storage_bucket": "hubbler-7b88f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642271775142:android:31237313ee5ddedc",
+        "android_client_info": {
+          "package_name": "com.demo.nishant.hubbler"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642271775142-bnfi7l11arfh41fvdchdvn505o3l7f1t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.demo.nishant.hubbler",
+            "certificate_hash": "8c922b3edfc93f7a4ed610964b13addd8967c2f9"
+          }
+        },
+        {
+          "client_id": "642271775142-mu27pc2musolnicqhhdfj23l99dk18t0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1Y6sC9sR4s8BWHXtRkmqwKctxA8chtpk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "642271775142-mu27pc2musolnicqhhdfj23l99dk18t0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

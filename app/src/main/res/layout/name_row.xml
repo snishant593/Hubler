@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="10.0"
+        android:layout_marginBottom="3dp"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:textColor="#000000"
+            android:text="Name"
+
+            android:layout_marginLeft="5dp"
+            android:id="@+id/name"
+            android:textSize="25dp"
+            android:layout_gravity="left"
+            />
+        <TextView
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:text="Displayname"
+
+            android:textColor="#4e342e"
+            android:textStyle="bold"
+            android:id="@+id/displayname"
+            android:fontFamily="serif-monospace"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_gravity="right"
+
+            />
+
+
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

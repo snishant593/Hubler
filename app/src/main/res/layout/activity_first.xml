@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="firstactivity"
+            type="com.demo.nishant.hubbler.Firstactivity">
+
+        </variable>
+    </data>
+
+    <android.support.constraint.ConstraintLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/cardviewcontainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <Button
+                android:layout_width="match_parent"
+                android:text="Add"
+                android:layout_height="wrap_content"
+                android:id="@+id/button"
+                android:onClick="@{()->firstactivity.onButtonclick()}"
+                />
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+</layout>
