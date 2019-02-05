@@ -15,6 +15,8 @@ import android.view.View;
 
 import com.demo.nishant.hubbler.databinding.ActivityFirstBinding;
 
+import java.util.ArrayList;
+
 import Adapter.Showdata;
 import Pojo.UserDetail;
 
@@ -22,7 +24,7 @@ public class Firstactivity extends AppCompatActivity {
 
     ActivityFirstBinding binding;
     Showdata adapter;
-
+   // ArrayList<String> arrayList = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +36,7 @@ public class Firstactivity extends AppCompatActivity {
         binding.recyclerView.setHasFixedSize(true);
         binding.recyclerView.addItemDecoration(new GridSpacingItemDecoration(1, dpToPx(0), false));
         binding.recyclerView.setItemAnimator(new DefaultItemAnimator());
+      //  arrayList = Singleton.getInstance().getArray();
 
         adapter = new Showdata(Singleton.getInstance().getArray(),getApplicationContext());
         binding.recyclerView.setAdapter(adapter);

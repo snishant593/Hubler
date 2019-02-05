@@ -43,6 +43,8 @@ public class Showdata extends RecyclerView.Adapter<Showdata.ShowViewHolder> {
 
         public ShowViewHolder(View itemView) {
             super(itemView);
+            text= (TextView) itemView.findViewById(R.id.displayname);
+
 
         }
     }
