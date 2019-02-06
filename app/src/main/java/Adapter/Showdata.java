@@ -28,7 +28,6 @@ public class Showdata extends RecyclerView.Adapter<Showdata.ShowViewHolder> {
 
     @Override
     public void onBindViewHolder(Showdata.ShowViewHolder holder, int position) {
-       // holder.image.setImageResource(R.drawable.planetimage);
        holder.text.setText(namelist.get(position).toString());
     }
 

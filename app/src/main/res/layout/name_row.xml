@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="wrap_content"
     android:layout_width ="match_parent"
+    android:orientation="vertical"
     >
 
 
@@ -10,42 +11,43 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_weight="10.0"
         android:layout_marginBottom="3dp"
+        android:layout_weight="1.0"
         >
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="5"
-            android:textColor="#000000"
-            android:text="Name"
+            android:layout_weight="0.2"
+            android:textColor="@android:color/black"
+            android:text="Name :"
 
             android:layout_marginLeft="5dp"
             android:id="@+id/name"
-            android:textSize="25dp"
+            android:textSize="18dp"
             android:layout_gravity="left"
             />
         <TextView
 
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="5"
+            android:layout_weight="0.8"
             android:text="Displayname"
-
             android:textColor="#4e342e"
             android:textStyle="bold"
             android:id="@+id/displayname"
             android:fontFamily="serif-monospace"
-            android:textSize="20dp"
-            android:gravity="center"
-            android:layout_gravity="right"
+            android:textSize="15dp"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="left"
 
             />
-
 
 
     </LinearLayout>
 
 
-</android.support.constraint.ConstraintLayout>
+
+
+
+</LinearLayout>

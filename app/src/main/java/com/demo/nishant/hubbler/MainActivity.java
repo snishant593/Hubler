@@ -30,8 +30,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-import Pojo.Parcableuserdetail;
-import Pojo.UserDetail;
+
 
 
 public class MainActivity extends AppCompatActivity {
@@ -72,28 +71,18 @@ public class MainActivity extends AppCompatActivity {
         postbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-             //  UserDetail userDetail = new UserDetail();
-              //  ArrayList<String> arrayList = new ArrayList<>();
+
                 GetDataFromEditText();
                 if (NameHolder.matches("") || Ageholder.matches("") || Addressholder.matches(""))
                 {
                     Toast.makeText(MainActivity.this, "Please fill mandatory filed", Toast.LENGTH_SHORT).show();
                     return;
                 }
-//                userDetail.setName(NameHolder);
-//                userDetail.setAddress(Addressholder);
-//                userDetail.setAge(Ageholder);
-                Singleton.getInstance().addToArray(NameHolder);
-              //  Singleton.getInstance().addToArray(Ageholder);
-               // Singleton.getInstance().addToArray(Addressholder);
 
+                Singleton.getInstance().addToArray(NameHolder);
 
 
                 Intent intent = new Intent(getApplicationContext(),Firstactivity.class);
-//                //Create Parcelable object
-//                Parcableuserdetail parcableuserdetail = new Parcableuserdetail(userDetail);
-                //Store Parcelable object in Intent
-              //  intent.putExtra("userdetail", parcableuserdetail);
                 startActivity(intent);
             }
         });

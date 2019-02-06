@@ -15,16 +15,13 @@ import android.view.View;
 
 import com.demo.nishant.hubbler.databinding.ActivityFirstBinding;
 
-import java.util.ArrayList;
 
 import Adapter.Showdata;
-import Pojo.UserDetail;
 
 public class Firstactivity extends AppCompatActivity {
 
     ActivityFirstBinding binding;
     Showdata adapter;
-   // ArrayList<String> arrayList = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,19 +33,14 @@ public class Firstactivity extends AppCompatActivity {
         binding.recyclerView.setHasFixedSize(true);
         binding.recyclerView.addItemDecoration(new GridSpacingItemDecoration(1, dpToPx(0), false));
         binding.recyclerView.setItemAnimator(new DefaultItemAnimator());
-      //  arrayList = Singleton.getInstance().getArray();
 
         adapter = new Showdata(Singleton.getInstance().getArray(),getApplicationContext());
         binding.recyclerView.setAdapter(adapter);
+        binding.report.setText(String.valueOf(adapter.getItemCount()));
 
-        Log.e("xx", "" + Singleton.getInstance().getArray());
+        Log.e("Singleton", "" + Singleton.getInstance().getArray());
 
-//        Intent intent = getIntent();
-//
-//        Parcableuserdetail parcableuserdetail = (Parcableuserdetail) intent
-//                .getParcelableExtra("userdetail");
-//        UserDetail userDetail = parcableuserdetail.getUserDetail();
-//        display(userDetail);
+
 
 
     }
@@ -58,17 +50,7 @@ public class Firstactivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void display(UserDetail userDetail) {
-        String desc = userDetail.getName() + ": " + userDetail.getAddress() + "\n"
-                + userDetail.getAge();
 
-        Log.e("Data Transfered", desc);
-
-        // binding.name.setText(userDetail.getName());
-        // binding.age.setText(userDetail.getAge());
-        // descTxt.setText(desc);
-        // imageView.setImageBitmap(laptop.getImageBitmap());
-    }
 
 
     public class GridSpacingItemDecoration extends RecyclerView.ItemDecoration {

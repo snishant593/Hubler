@@ -13,36 +13,75 @@
         </variable>
     </data>
 
-    <android.support.constraint.ConstraintLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    <RelativeLayout
+
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/mainlayout">
 
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recycler_view"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            card_view:layout_constraintEnd_toEndOf="parent"
-            card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toTopOf="parent" />
+            android:weightSum="1.0"
+            android:id="@+id/layout1">
 
-        <Button
-            android:id="@+id/button"
+            <Button
+                android:id="@+id/button"
+                android:layout_width="0dp"
+                android:layout_weight="0.9"
+                android:layout_marginLeft="250dp"
+                android:layout_height="wrap_content"
+                android:onClick="@{()->firstactivity.onButtonclick()}"
+                android:text="Add Json "
+                 />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="50dp"
-            android:onClick="@{()->firstactivity.onButtonclick()}"
-            android:text="Add"
-            card_view:layout_constraintBottom_toBottomOf="parent"
-            card_view:layout_constraintEnd_toEndOf="parent"
-            card_view:layout_constraintHorizontal_bias="1.0"
-            card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toBottomOf="@+id/recycler_view" />
-    </android.support.constraint.ConstraintLayout>
+            android:layout_below="@+id/layout1"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/layout2"
+            android:weightSum="1.0">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Total Reports:"
+                android:layout_weight="0.6"
+                android:textSize="15dp"
+                android:textColor="@android:color/black"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:textSize="12dp"
+                android:id="@+id/report"
+                android:textColor="@android:color/holo_green_dark"
+                android:layout_alignParentRight="true"/>
+
+        </LinearLayout>
+
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/layout2"
+          android:layout_marginTop="10dp">
+
+          <android.support.v7.widget.RecyclerView
+              android:id="@+id/recycler_view"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginEnd="8dp"
+              android:layout_marginStart="8dp"
+              android:layout_marginTop="8dp"
+
+              />
+      </LinearLayout>
+
+
+
+    </RelativeLayout>
 </layout>
